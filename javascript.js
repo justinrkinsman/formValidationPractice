@@ -37,3 +37,26 @@ zip.addEventListener('input', () => {
         zip.reportValidity()
     }
 })
+
+const password = document.getElementById('password');
+password.addEventListener('input', () => {
+    const validityState = password.validity
+    if (validityState.tooShort){
+        password.setCustomValidity('Please input at least 8 characters')
+        password.reportValidity()
+    }else{
+        password.setCustomValidity('')
+        password.reportValidity()
+    }
+})
+
+const passwordConfirm = document.getElementById('passwordConfirm');
+passwordConfirm.addEventListener('input', () => {
+    if (passwordConfirm.value !== password.value){
+        passwordConfirm.setCustomValidity('Passwords do not match')
+        passwordConfirm.reportValidity()
+    }else{
+        passwordConfirm.setCustomValidity('')
+        passwordConfirm.reportValidity()
+    }
+})
