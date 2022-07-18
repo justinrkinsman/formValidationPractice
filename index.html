@@ -9,25 +9,17 @@
 <body>
     <form novalidate>
         <fieldset>
-            <label for="email">Email: 
-                <input type="email" name="email" id="email" required minlength="1">
-                <span class="error" aria-live="ploite"
-            </label>
-            <label for="country">Country: 
-                <input type="text" name="country" id="country" required minlength="2">
-            </label>
-            <label for="zipCode">Zip Code:
-                <input type="text" name="zipCode" id="zipCode" required minlength="5">
-            </label>
-            <label for="password">Password: 
-                <input type="text" name="password" id="password" required minlength="8">
-            </label>
-            <label for="passwordConfirm">Confirm Password: 
-                <input type="text" name="passwordConfirm" id="passwordConfirm" required minlength="8">
-            </label>
-            <button type="submit">
-                Submit: 
-            </button>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+            <label for="country">Country: </label>
+            <input type="text" name="country" id="country" required pattern="[A-Za-z]+" minlength="4">
+            <label for="zipCode">Zip Code: </label>
+            <input type="text" name="zipCode" id="zipCode" required minlength="5">
+            <label for="password">Password: </label>
+            <input type="text" name="password" id="password" required minlength="8">
+            <label for="passwordConfirm">Confirm Password: </label>
+            <input type="text" name="passwordConfirm" id="passwordConfirm" required minlength="8">
+            <button type="submit">Submit: </button>
         </fieldset>
     </form>
 </body>
