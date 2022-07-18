@@ -60,3 +60,12 @@ passwordConfirm.addEventListener('input', () => {
         passwordConfirm.reportValidity()
     }
 })
+
+const submit = document.querySelector('button')
+submit.addEventListener('click', () => {
+    if (!email.validity.valid || !nationality.validity.valid || !zip.validity.valid || !password.validity.valid || !passwordConfirm.validity.valid){
+        alert('Please fill in required forms')
+    }else{
+        alert('High five')
+    }
+})
