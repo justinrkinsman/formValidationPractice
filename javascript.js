@@ -1,8 +1,8 @@
-/*function validate(inputID){
+function validate(inputID){
     const input = document.getElementById(inputID);
     //const validityState = input.validity;
     console.log(input.checkValidity())
-/*    if (validityState.valueMissing) {
+    if (validityState.valueMissing) {
         input.setCustomValidity('Please fill out this input');
     }else if (validityState.tooShort){
         input.setCustomValidity('not long enough');
@@ -13,7 +13,9 @@
     input.reportValidity();
 }
 
-const country = document.getElementById('country');
+
+
+/*const country = document.getElementById('country');
 country.addEventListener('input', validate('country') //{
   /*  if (!country.checkValidity()){
         country.setCustomValidity("please fill out country name")
@@ -65,6 +67,9 @@ nationality.addEventListener('input', () => {
     const validityState = nationality.validity
     if (validityState.tooShort){
         nationality.setCustomValidity('Please input at least 4 characters')
+        nationality.reportValidity()
+    }else if (validityState.typeMismatch){
+        nationality.setCustomValidity('Please use letters only')
         nationality.reportValidity()
     }else{
         nationality.setCustomValidity('')
